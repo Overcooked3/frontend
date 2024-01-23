@@ -1,11 +1,11 @@
 # Utiliser une image de base Node.js
-FROM node:18
+FROM node:alpine
 
 # Définir le répertoire de travail
 WORKDIR /usr/src/app
 
 # Copier les fichiers package.json et package-lock.json
-COPY package*.json ./
+COPY package.json package.json
 
 # Installer les dépendances du projet
 RUN npm install
